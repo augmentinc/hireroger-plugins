@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "roger": {
+      "type": "http",
+      "url": "https://mcp.hireroger.com/mcp/directory"
+    }
+  }
+}

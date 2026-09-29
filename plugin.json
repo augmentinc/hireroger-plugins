@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hireroger",
+  "version": "1.0.0",
+  "description": "Roger runs outbound sales and paid ads. Connect it to find and enrich leads, build and launch outbound campaigns, triage and answer replies, and launch, measure and adjust Meta ads, all from your agent.",
+  "author": {
+    "name": "Roger",
+    "url": "https://hireroger.com"
+  },
+  "homepage": "https://www.hireroger.com/docs/mcp",
+  "repository": "https://github.com/augmentinc/hireroger-plugins",
+  "license": "MIT",
+  "keywords": [
+    "sales",
+    "outbound",
+    "lead-generation",
+    "email",
+    "linkedin",
+    "ads",
+    "meta-ads",
+    "marketing",
+    "mcp"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Roger",
+        "shortDescription": "Outbound sales and paid ads, run from your agent.",
+        "longDescription": "Roger runs outbound sales and paid ads. Connect it to find and enrich leads, build and launch outbound campaigns, triage and answer replies, and launch, measure and adjust Meta ads, all from your agent.",
+        "developerName": "Roger",
+        "websiteURL": "https://www.hireroger.com/docs/mcp",
+        "privacyPolicyURL": "https://www.hireroger.com/privacy",
+        "termsOfServiceURL": "https://www.hireroger.com/terms",
+        "defaultPrompt": [
+          "Use Roger to summarize how my outbound campaigns and ads did this week.",
+          "Use Roger to show replies that need an answer and draft responses."
+        ]
+      }
+    }
+  }
+}

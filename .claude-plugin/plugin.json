@@ -1,0 +1,23 @@
+{
+  "name": "hireroger",
+  "version": "1.0.0",
+  "description": "Roger runs outbound sales and paid ads. Connect it to find and enrich leads, build and launch outbound campaigns, triage and answer replies, and launch, measure and adjust Meta ads, all from your agent.",
+  "author": {
+    "name": "Roger",
+    "url": "https://hireroger.com"
+  },
+  "homepage": "https://www.hireroger.com/docs/mcp",
+  "repository": "https://github.com/augmentinc/hireroger-plugins",
+  "license": "MIT",
+  "keywords": [
+    "sales",
+    "outbound",
+    "lead-generation",
+    "email",
+    "linkedin",
+    "ads",
+    "meta-ads",
+    "marketing",
+    "mcp"
+  ]
+}
