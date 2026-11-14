@@ -7,7 +7,7 @@ description: "Use when the user wants to start, build, fill, launch, pause or re
 
 ## Before building
 - `campaigns_list`: reuse or extend a campaign that already targets the same audience.
-- `whoami` shows connected mailboxes and LinkedIn senders (a campaign needs a live sender for its channel) and the
+- `mailboxes_list` and `linkedin_senders_list` (through `roger_query`) show the senders (a campaign needs a live sender for its channel), `whoami` the
   sequence credits left (each enrolled contact uses one).
 
 ## Build
