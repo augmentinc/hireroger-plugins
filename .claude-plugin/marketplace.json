@@ -5,13 +5,13 @@
     "url": "https://hireroger.com"
   },
   "metadata": {
-    "description": "Roger: outbound sales and paid ads for AI agents."
+    "description": "Roger: outbound sales for AI agents."
   },
   "plugins": [
     {
       "name": "hireroger",
       "source": "./",
-      "description": "Roger runs outbound sales and paid ads. Connect it to find and enrich leads, build and launch outbound campaigns, triage and answer replies, and launch, measure and adjust Meta ads, all from your agent."
+      "description": "Roger runs outbound sales. Connect it to find and enrich leads, build and launch outbound campaigns, and triage and answer replies, all from your agent."
     }
   ]
 }
