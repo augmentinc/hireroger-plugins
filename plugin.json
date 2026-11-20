@@ -86,7 +86,7 @@
             }
           ]
         },
-        "demo_recording_url": "https://github.com/augmentinc/hireroger-plugins/blob/main/media/roger-connector-demo.mp4",
+        "demo_recording_url": "https://roger-connector-demo.vercel.app/",
         "commerce": false,
         "commerce_description": "Roger does not sell anything or take payments through ChatGPT."
       },
