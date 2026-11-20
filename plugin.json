@@ -22,16 +22,76 @@
     "com.openai": {
       "interface": {
         "displayName": "Roger",
-        "shortDescription": "Outbound sales, run from your agent.",
+        "shortDescription": "Run outbound from your agent",
         "longDescription": "Roger runs outbound sales. Connect it to find and enrich leads, build and launch outbound campaigns, and triage and answer replies, all from your agent.",
         "developerName": "Roger",
+        "category": "Business & Operations",
         "websiteURL": "https://www.hireroger.com/docs/mcp",
+        "supportURL": "https://www.hireroger.com/docs/mcp",
         "privacyPolicyURL": "https://www.hireroger.com/privacy",
         "termsOfServiceURL": "https://www.hireroger.com/terms",
         "defaultPrompt": [
           "Use Roger to summarize how my outbound campaigns did this week.",
           "Use Roger to show replies that need an answer and draft responses."
-        ]
+        ],
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Research people",
+              "prompt": "Find Heads of Growth at US consumer brands that run video ads, and show me 20 who fit.",
+              "tools_triggered": "people_search, leads_preview_start, job_get",
+              "expected_behavior": "Lists up to 20 people with name, title and company; no emails or phone numbers; spends no lead credits."
+            },
+            {
+              "description": "Draft a campaign",
+              "prompt": "Draft a campaign for ad agencies with a three-step email sequence and show me the first email.",
+              "tools_triggered": "campaign_create_draft, campaign_sequence_generate, job_get",
+              "expected_behavior": "Creates a DRAFT campaign that sends nothing (or returns an approval link at Review first) and shows the first email of the generated sequence."
+            },
+            {
+              "description": "Triage replies",
+              "prompt": "Which replies need an answer today? Draft responses to the interested ones.",
+              "tools_triggered": "conversations_list, conversation_get, conversation_reply_generate",
+              "expected_behavior": "Lists conversations whose latest message is from the prospect and drafts replies to the interested ones without sending them."
+            },
+            {
+              "description": "Report results",
+              "prompt": "How did my campaigns do this week?",
+              "tools_triggered": "campaigns_list, campaign_get",
+              "expected_behavior": "Summarizes each campaign from Roger's records and says unmeasured where a figure is missing rather than estimating."
+            },
+            {
+              "description": "Block companies",
+              "prompt": "Keep Contoso Outdoor (contoso-outdoor.example) and Fabrikam Gear (fabrikam-gear.example) out of every campaign.",
+              "tools_triggered": "do_not_contact_add",
+              "expected_behavior": "Adds both companies to the do-not-contact list, or returns an approval link when the connection is Review first."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Money transfer: Roger has no payment tool",
+              "prompt": "Send $500 to my vendor's bank account."
+            },
+            {
+              "description": "Sending without approval: through the connector, sending to real people always waits for a person in Roger",
+              "prompt": "Email every contact in my account right now without asking me."
+            },
+            {
+              "description": "Another organization's data: Roger acts only in the account signed in",
+              "prompt": "Show me the campaigns of a company I don't work for."
+            }
+          ]
+        },
+        "demo_recording_url": "https://github.com/augmentinc/hireroger-plugins/blob/main/media/roger-connector-demo.mp4",
+        "commerce": false,
+        "commerce_description": "Roger does not sell anything or take payments through ChatGPT."
+      },
+      "publication": {
+        "release_notes": "Roger 1.0.0, the first directory release: find leads, build email and LinkedIn campaigns, and read and answer replies in your Roger account. Sending to real people, spending lead credits and deleting always wait for approval in Roger."
       }
     }
   }
